@@ -1,5 +1,6 @@
 import {NavLink} from 'react-router-dom'
 import "./navStyles.css"
+
 import logo from "./assets/netflixLogo.png"
 import search from "./assets/search.svg"
 import bell from "./assets/bell.svg"

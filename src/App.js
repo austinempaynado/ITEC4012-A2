@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import {NavBar} from "./components/nav/nav"
+import {FeaturedCard} from "./components/featured-card/featured"
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +15,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar/>
+        <FeaturedCard/>
       </Router>
     </div>
   );
