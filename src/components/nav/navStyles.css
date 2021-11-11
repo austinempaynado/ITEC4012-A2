@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-content: center;
-    background-color: aquamarine;
+    background-color: black;
 }
 
 .nav-list{
@@ -13,16 +13,44 @@
 }
 
 .nav-item{
+    display: flex;
+    align-content: center;
     margin-right: 1rem;
     
 }
 .nav-bar a{
     text-decoration: none;
-}
-#profiles{
-    margin: 1rem 1rem 1rem auto;
+    color: white;
+    margin: auto;
 }
 
-.logo{
-    margin: 1rem;
+.nav-bar a:hover{
+    color: grey;
 }
+
+#right-nav{
+    margin: 1rem 1rem 1rem auto;
+    display: flex;
+    align-content: center;
+}
+
+.right-nav-item{
+    display: flex;
+    height: 1.4rem;
+    color: white;
+    align-content: center;
+    margin-left: 1.4rem;
+}
+.right-nav-item:hover{
+    color: grey;
+}
+
+#logo{
+    margin: 1.2rem 1rem 1.2rem 2rem;
+    width: 6%;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+

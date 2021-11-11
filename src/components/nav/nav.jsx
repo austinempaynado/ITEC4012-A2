@@ -1,6 +1,9 @@
 import {NavLink} from 'react-router-dom'
 import "./navStyles.css"
-import logo from "./netflixLogo.png"
+import logo from "./assets/netflixLogo.png"
+import search from "./assets/search.svg"
+import bell from "./assets/bell.svg"
+import profile from"./assets/profile.svg"
 
 export const NavBar = () =>{
     return(
@@ -20,7 +23,12 @@ export const NavBar = () =>{
                     <NavLink exact={true} to="/">New &amp; Popular</NavLink>
                 </li>
             </ul>
-                <NavLink id="profiles" exact={true} to="/">Profiles</NavLink>
+                
+            <div id="right-nav">
+                <input className="right-nav-item" type="image" src={search} alt="search bar"/>
+                <input className="right-nav-item" type="image" src={bell} alt="notifications"/>
+                <input className="right-nav-item" type="image" src={profile} alt="profiles icon"/>
+            </div>
         </nav>
 
     )
