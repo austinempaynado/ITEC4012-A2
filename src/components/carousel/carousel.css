@@ -1,12 +1,26 @@
-#carousel-container{
-    width: fit-content;
-    margin: auto;
+#carousel{
+    display: flex;
+    height: 30vh;
 }
 
-#carousel-name{
-    color: white;
-    margin: 2rem 0 0 0;
+#carousel-content {
+  width: fit-content;
+  margin: auto;
 }
-#movie-card-container{
-    display: flex;
+
+#carousel-name {
+  color: white;
+  margin: 2rem 0 0 0;
 }
+#movie-card-container {
+  display: flex;
+}
+
+.button-container{
+    z-index: 100000;
+    background-color: white;
+    width: 5%;
+    height: max-content;
+
+}
+

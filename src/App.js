@@ -7,6 +7,7 @@ import { MovieCard } from "./components/movie-card/movie-card";
 import { Home } from "./components/pages/home/home";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Login } from "./components/pages/login/login";
 
 function App() {
   return (
@@ -14,8 +15,11 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/login">
+            <Login/>
           </Route>
         </Switch>
       </Router>
