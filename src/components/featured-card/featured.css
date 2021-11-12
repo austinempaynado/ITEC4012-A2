@@ -1,8 +1,6 @@
 #featuredContainer{
     position: relative;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(79,79,79,1) 51%, rgba(148,148,148,1) 100%);
-    
+    background: #191919;
 }
 
 #featuredShowPhoto{
@@ -33,13 +31,12 @@
 
 #featuredDescription{
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-shadow: 0.5rem 0.5rem 1rem #000000;
     width: 70%;
 }
 
 .featuredButtons{
-
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem 2.4rem 1rem 2.4rem;
@@ -49,7 +46,6 @@
     box-shadow: 0.4rem 0.4rem 9rem #000000;
     
 }
-
 
 #moreInfo{
     background-color: #454545;
@@ -67,5 +63,4 @@
     background-color: grey;
     opacity: 0.9;
     cursor: pointer;
-
 }
