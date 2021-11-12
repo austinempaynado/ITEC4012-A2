@@ -1,66 +1,67 @@
-#featuredContainer{
-    position: relative;
-    background: #191919;
+#featuredContainer {
+  position: relative;
+  background: #191919;
 }
 
-#featuredShowPhoto{
-    width: 100%;
-    opacity: 0.5;
-    height: 50rem;
-    object-fit: cover;
-    object-position: 0 10%;
-    background-image : linear-gradient(to bottom, 
-    rgba(255,255,255, 0), 
-    rgba(255,255,255, 1) 90%);
+#featuredShowPhoto {
+  width: 100%;
+  opacity: 0.5;
+  height: 50rem;
+  object-fit: cover;
+  object-position: 0 10%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 90%
+  );
 }
 
-#featuredButtonContainer{
-    z-index: 10000;
-    position: absolute;
-    top: 40%;
-    left: 7%;
+#featuredButtonContainer {
+  z-index: 10000;
+  position: absolute;
+  top: 40%;
+  left: 7%;
 }
 
-#featuredHeader{
-    color: white;
-    font-size: 6rem;
-    text-shadow: 0.4rem 0.4rem 2rem #000000;
-    margin-bottom: 0;
-    margin-top: 0;
+#featuredHeader {
+  color: white;
+  font-size: 6rem;
+  text-shadow: 0.4rem 0.4rem 2rem #000000;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-#featuredDescription{
-    color: white;
-    font-size: 1.6rem;
-    text-shadow: 0.5rem 0.5rem 1rem #000000;
-    width: 70%;
+#featuredDescription {
+  color: white;
+  font-size: 1.6rem;
+  text-shadow: 0.5rem 0.5rem 1rem #000000;
+  width: 70%;
 }
 
-.featuredButtons{
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 1rem 2.4rem 1rem 2.4rem;
-    border-radius: 0.4rem;
-    border: none;
-    margin: 0 2rem 0 0;
-    box-shadow: 0.4rem 0.4rem 9rem #000000;
-    
+.featuredButtons {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2.4rem 1rem 2.4rem;
+  border-radius: 0.4rem;
+  border: none;
+  margin: 0 2rem 0 0;
+  box-shadow: 0.4rem 0.4rem 9rem #000000;
 }
 
-#moreInfo{
-    background-color: #454545;
-    color: white;
+#moreInfo {
+  background-color: #454545;
+  color: white;
 }
 
-#moreInfo:hover{
-    background-color: #454545;
-    color: grey;
-    opacity: 0.9;
-    cursor: pointer;
+#moreInfo:hover {
+  background-color: #454545;
+  color: grey;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
-#playButton:hover{
-    background-color: grey;
-    opacity: 0.9;
-    cursor: pointer;
+#playButton:hover {
+  background-color: grey;
+  opacity: 0.9;
+  cursor: pointer;
 }

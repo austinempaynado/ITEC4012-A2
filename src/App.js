@@ -1,28 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-import {NavBar} from "./components/nav/nav"
-import {FeaturedCard} from "./components/featured-card/featured"
-import {MovieCard} from "./components/movie-card/movie-card"
-import { Home } from './components/pages/home/home';
+import { NavBar } from "./components/nav/nav";
+import { FeaturedCard } from "./components/featured-card/featured";
+import { MovieCard } from "./components/movie-card/movie-card";
+import { Home } from "./components/pages/home/home";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar/>
+        <NavBar />
         <Switch>
           <Route path="/">
-            <Home/>
-            
+            <Home />
           </Route>
         </Switch>
       </Router>

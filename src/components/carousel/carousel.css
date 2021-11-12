@@ -1,0 +1,12 @@
+#carousel-container{
+    width: fit-content;
+    margin: auto;
+}
+
+#carousel-name{
+    color: white;
+    margin: 2rem 0 0 0;
+}
+#movie-card-container{
+    display: flex;
+}
