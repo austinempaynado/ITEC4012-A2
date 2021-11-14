@@ -1,0 +1,42 @@
+#footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-content{
+    margin: 3rem auto 3rem auto;
+}
+
+#footer-links {
+  display: flex;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1rem 3rem 1rem 0rem;
+}
+
+h1 {
+  width: fit-content;
+  color: grey;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+a {
+  color: grey;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  font-size: 14px;
+}
+
+p {
+  color: grey;
+  margin: 0;
+  margin: 0;
+}
+a:hover {
+  text-decoration: underline;
+}
