@@ -1,7 +1,10 @@
 import "./movie-card.css";
 import PropTypes from "prop-types";
+import {useState} from "react";
+
+
+//assets
 import Thumbnail from "./assets/communityThumbnail.jpg";
-import { useEffect, useState, useContext } from "react";
 import { FaPlay } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaThumbsDown } from "react-icons/fa";
@@ -16,9 +19,12 @@ export const MovieCard = (props) => {
   return (
     <div
       id="card"
-      onClick={() => {
+      onMouseEnter={() => {
         setIsPreviewMode((prevPreview) => !prevPreview);
         console.log(isPreviewMode);
+      }}
+      onMouseLeave={() =>{
+        setIsPreviewMode((prevPreview) => !prevPreview);
       }}
     >
       {isPreviewMode ? (

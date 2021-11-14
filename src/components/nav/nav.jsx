@@ -2,9 +2,9 @@ import {NavLink} from 'react-router-dom'
 import "./navStyles.css"
 
 import logo from "./assets/netflixLogo.png"
-import search from "./assets/search.svg"
-import bell from "./assets/bell.svg"
-import profile from"./assets/profile.svg"
+import {FaSearch} from "react-icons/fa"
+import {FaUserAlt} from "react-icons/fa"
+import {FaBell} from "react-icons/fa"
 
 export const NavBar = () =>{
     return(
@@ -26,9 +26,9 @@ export const NavBar = () =>{
             </ul>
                 
             <div id="right-nav">
-                <input className="right-nav-item" type="image" src={search} alt="search bar"/>
-                <input className="right-nav-item" type="image" src={bell} alt="notifications"/>
-                <input className="right-nav-item" type="image" src={profile} alt="profiles icon"/>
+                <button className="right-nav-item">{<FaSearch className="nav-icon"/>}</button>
+                <button className="right-nav-item">{<FaBell className="nav-icon"/>}</button>
+                <button className="right-nav-item">{<FaUserAlt className="nav-icon"/>}</button>
             </div>
         </nav>
 

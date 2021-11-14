@@ -1,11 +1,8 @@
 .nav-bar {
-  z-index: 20000;
-  position: fixed;
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
+  position: fixed;
+  z-index: 20000;
+  width: 100%;
   background-color: #191919;
 }
 
@@ -31,16 +28,20 @@
 }
 
 #right-nav {
-  margin: 1rem 1rem 1rem auto;
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  margin: auto 0 auto auto;
+  padding-right: 1.2rem;
+  
 }
 
 .right-nav-item {
-  margin: auto;
-  margin-left: 1.4rem;
-  height: 1.4rem;
+  cursor: pointer;
   color: white;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  margin: auto 0.6rem auto 0;
 }
 .right-nav-item:hover {
   color: grey;

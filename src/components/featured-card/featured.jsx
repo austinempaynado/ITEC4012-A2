@@ -2,6 +2,7 @@ import "./featured.css";
 import featuredPhoto from "./assets/community.jpg";
 import { FaPlay } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
+import { CallToAction } from "../callToAction/callToAction";
 
 export const FeaturedCard = () => {
   return (
@@ -11,18 +12,20 @@ export const FeaturedCard = () => {
         src={featuredPhoto}
         alt="featured show picture"
       />
-      <div id="featuredButtonContainer">
-        <h1 id="featuredHeader">Community</h1>
-        <p id="featuredDescription">
+      <div id="featuredDescriptionContainer">
+        <h1 id="Header">Community</h1>
+        <p id="Description">
           A suspended lawyer is forced to enroll in a community college with an
           eccentric staff and student body.
         </p>
-        <button id="playButton" className="featuredButtons">
-          <FaPlay id="playIcon" /> Play
-        </button>
-        <button id="moreInfo" className="featuredButtons">
-          <FaInfoCircle id="infoIcon" /> More information
-        </button>
+        <div id="CTAcontainer">
+          <CallToAction type="Primary" name="Play" icon={<FaPlay />} />
+          <CallToAction
+            type="Secondary"
+            name="More Information"
+            icon={<FaInfoCircle />}
+          />
+        </div>
       </div>
     </div>
   );

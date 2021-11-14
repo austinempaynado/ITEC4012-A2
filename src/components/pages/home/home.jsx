@@ -4,6 +4,7 @@ import { FeaturedCard } from "../../featured-card/featured";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { MovieCarousel } from "../../carousel/carousel";
 
+
 export const Home = (props) => {
   const { image, name, genre } = props;
 
