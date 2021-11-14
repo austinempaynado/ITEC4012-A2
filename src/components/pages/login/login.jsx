@@ -3,6 +3,7 @@ import "./login.css";
 import { CallToAction } from "../../callToAction/callToAction";
 import { Footer } from "../../footer/footer";
 import Logo from "../../nav/assets/netflixLogo.png";
+import { DropDown } from "../../language-drop-down/language";
 
 export const Login = () => {
   return (
@@ -17,7 +18,7 @@ export const Login = () => {
           />
         </div>
       </div>
-
+      <DropDown text="English"></DropDown>
       <Footer />
     </div>
   );
