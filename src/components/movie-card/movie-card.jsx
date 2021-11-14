@@ -1,7 +1,6 @@
 import "./movie-card.css";
 import PropTypes from "prop-types";
-import {useState} from "react";
-
+import { useState } from "react";
 
 //assets
 import Thumbnail from "./assets/communityThumbnail.jpg";
@@ -10,6 +9,7 @@ import { FaPlus } from "react-icons/fa";
 import { FaThumbsDown } from "react-icons/fa";
 import { FaThumbsUp } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
+import { IconButton } from "../iconButton/iconButton";
 
 export const MovieCard = (props) => {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
@@ -23,30 +23,22 @@ export const MovieCard = (props) => {
         setIsPreviewMode((prevPreview) => !prevPreview);
         console.log(isPreviewMode);
       }}
-      onMouseLeave={() =>{
+      onMouseLeave={() => {
         setIsPreviewMode((prevPreview) => !prevPreview);
       }}
     >
       {isPreviewMode ? (
-        <div>
-          <img className="movie-photo" src={Thumbnail} alt={name + "image"} />
+        <div >
+          <div>
+            <img className="movie-photo" src={Thumbnail} alt={name + "image"} />
+          </div>
           <div id="button-container">
-            <button className="preview-button" id="play-button">
-              <FaPlay />
-            </button>
-            <button className="preview-button">
-              <FaPlus />
-            </button>
-            <button className="preview-button">
-              <FaThumbsUp />
-            </button>
-            <button className="preview-button">
-              <FaThumbsDown />
-            </button>
+            <IconButton icon={<FaPlay />} type="Primary" />
+            <IconButton icon={<FaPlus />} type="Secondary" />
+            <IconButton icon={<FaThumbsUp />} type="Secondary" />
+            <IconButton icon={<FaThumbsDown />} type="Secondary" />
             <div id="movie-info-container">
-              <button className="preview-button" id="more-info">
-                <FaAngleDown />
-              </button>
+              <IconButton icon={<FaAngleDown />} type="Secondary" />
             </div>
           </div>
           <p className="details">Comedy</p>
