@@ -13,12 +13,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <NavBar /> */}
         <Switch>
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/login">
+          <Route exact path="/">
             <Login/>
           </Route>
         </Switch>

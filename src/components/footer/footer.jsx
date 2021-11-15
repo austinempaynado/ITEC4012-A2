@@ -1,7 +1,6 @@
 import "./footer.css";
 
 export const Footer = () => {
-  console.log("this is working");
   return (
     <div id="footer-container">
       <div id="footer-content">

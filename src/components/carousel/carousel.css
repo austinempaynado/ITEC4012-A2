@@ -1,41 +1,17 @@
-#carousel {
-  display: flex;
+#carousel{
   width: 100%;
-  margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-#carousel-name {
-  color: white;
-  font-weight: bold;
-  font-size: 1.8rem;
-  margin: 2rem 0 1rem 4rem;
+#carousel-content{
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-#carousel-content {
-  width: 100%;
-  margin: auto;
-}
-
-#movie-card-container {
+#movie-card-row{
   display: flex;
-  margin:0;
-  padding:0;
 }
 
-.button-container {
-  display: flex;
-  background-color: #1E1E1E;
-  justify-content: center;
-  align-items: center;
-  width: 4%;
-  cursor: pointer;
-}
-
-.button-container:hover{
-  opacity: 0.8;
-}
-
-.chevron{
+#label-text{
   color: white;
 }

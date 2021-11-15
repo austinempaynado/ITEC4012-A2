@@ -1,44 +1,54 @@
 import "./login.css";
 
-import { CallToAction } from "../../callToAction/callToAction";
 import { Footer } from "../../footer/footer";
-import { DropDown } from "../../language-drop-down/language";
-import { FaChevronRight } from "react-icons/fa";
-import Logo from "../../nav/assets/netflixLogo.png";
-import netflixBG from "./assets/netflixBG.jpeg";
+import { SignInCard } from "../../sign-in-card/sign-in-card";
+import { Accordion } from "../../accordion/accordion";
+import { Showcase } from "../../showcase/showcase";
+
+import faq from "../../../constants/faq.jsx";
+import showcaseConstants from "../../../constants/showcase-constants";
+
+import showcaseEnjoyImg from "../../../constants/showcase-assets/showcase-enjoy.png";
+import showcaseDownloadImg from "../../../constants/showcase-assets/showcase-download.jpg";
+import showcaseWatchImg from "../../../constants/showcase-assets/showcase-watch.png";
+import showcaseCreateImg from "../../../constants/showcase-assets/showcase-create.png";
 
 export const Login = () => {
   return (
-    <div>
-      <div
-        id="sign-in-container"
-        style={{ backgroundImage: `url(${netflixBG})` }}
-      >
-        <div id="sign-in-bar">
-          <img id="logo" src={Logo} alt="" />
-          <div id="sign-in-buttons">
-            <DropDown text="English"></DropDown>
-            <CallToAction name="Sign In" type="SignIn" />
-          </div>
-        </div>
-
-        <div id="middle-captions">
-          <h1 id="login-heading">
-            Unlimited movies, TV <br />
-            shows, and more.
-          </h1>
-          <h2 id="login-subheading">Watch anywhere. Cancel anytime.</h2>
-          <p id="login-caption">
-            Ready to watch? Enter your email to create or restart your
-            membership
-          </p>
-          <div>
-            <div id = "input-container">
-              <input id="email-input" type="text" placeholder="Email address"></input>
-              <button id="get-started-button">Get Started {<FaChevronRight id="get-started-chevron"/>}</button>
-            </div>
-          </div>
-        </div>
+    <div id="login-page">
+      <SignInCard />
+      <div>
+        <Showcase
+          label={showcaseConstants.label.enjoy}
+          text={showcaseConstants.text.enjoy}
+          image={showcaseEnjoyImg}
+        />
+        <Showcase
+          label={showcaseConstants.label.download}
+          text={showcaseConstants.text.download}
+          image={showcaseDownloadImg}
+          flipped
+        />
+        <Showcase
+          label={showcaseConstants.label.watch}
+          text={showcaseConstants.text.watch}
+          image={showcaseWatchImg}
+        />
+        <Showcase
+          label={showcaseConstants.label.create}
+          text={showcaseConstants.text.create}
+          image={showcaseCreateImg}
+          flipped
+        />
+      </div>
+      <div id="faq-container">
+        <h1 id="faq-heading">Frequently Asked Questions</h1>
+        <Accordion label={faq.label.about} text={faq.text.about} />
+        <Accordion label={faq.label.cost} text={faq.text.cost} />
+        <Accordion label={faq.label.where} text={faq.text.where} />
+        <Accordion label={faq.label.cancel} text={faq.text.cancel} />
+        <Accordion label={faq.label.what} text={faq.text.what} />
+        <Accordion label={faq.label.kids} text={faq.text.kids} />
       </div>
 
       <Footer />

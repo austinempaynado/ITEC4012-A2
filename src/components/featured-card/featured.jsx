@@ -19,11 +19,12 @@ export const FeaturedCard = () => {
           eccentric staff and student body.
         </p>
         <div id="CTAcontainer">
-          <CallToAction type="Primary" name="Play" icon={<FaPlay />} />
+          <CallToAction type="Primary" name="Play" icon={<FaPlay />} hasIcon />
           <CallToAction
             type="Secondary"
             name="More Information"
             icon={<FaInfoCircle />}
+            hasIcon
           />
         </div>
       </div>

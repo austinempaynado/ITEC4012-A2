@@ -9,20 +9,16 @@ export const MovieCarousel = (props) => {
   const { label } = props;
   return (
     <div id="carousel">
-      <div id="carousel-content">
-        <h1 id="carousel-name">{label}</h1>
-        <div id="movie-card-container">
-          <div className="button-container">
-            {<FaChevronLeft className="chevron" />}
-          </div>
+      <div id ="carousel-content">
+        <h1 id="label-text">{label}</h1>
+        <div id="movie-card-row">
           <MovieCard />
           <MovieCard />
           <MovieCard />
           <MovieCard />
           <MovieCard />
-          <div className="button-container" id="right-chevron">
-            {<FaChevronRight className="chevron" />}
-          </div>
+          <MovieCard />
+
         </div>
       </div>
     </div>

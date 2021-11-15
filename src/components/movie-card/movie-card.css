@@ -7,7 +7,7 @@
   margin: 0rem 0rem 0rem 0.2rem;
   box-shadow: 0 2px 7px black;
   background: #212121;
-  border-radius: 0.8rem;
+  border-radius: 0.2rem;
   overflow: hidden;
   cursor: pointer;
 }
@@ -66,4 +66,9 @@
 
 #image-container{
   width: 100%;
+}
+
+.red{
+  background: red;
+  color: white;
 }

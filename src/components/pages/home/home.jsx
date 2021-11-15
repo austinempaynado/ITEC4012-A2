@@ -10,6 +10,7 @@ export const Home = (props) => {
 
   return (
     <div>
+      <NavBar/>
       <FeaturedCard />
       <div style={{ overflow: "auto"}}>
         <MovieCarousel label="Austin's Favourites"></MovieCarousel>

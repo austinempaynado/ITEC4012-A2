@@ -14,14 +14,13 @@ import { IconButton } from "../iconButton/iconButton";
 export const MovieCard = (props) => {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
 
-  const { name, type } = props;
+  const { name, genre, thumbnail } = props;
 
   return (
     <div
       id="card"
       onMouseEnter={() => {
-        setIsPreviewMode((prevPreview) => !prevPreview);
-        console.log(isPreviewMode);
+          setIsPreviewMode((prevPreview) => !prevPreview);
       }}
       onMouseLeave={() => {
         setIsPreviewMode((prevPreview) => !prevPreview);
@@ -54,5 +53,6 @@ export const MovieCard = (props) => {
 
 MovieCard.propTypes = {
   name: PropTypes.string,
-  type: PropTypes.string,
+  genre: PropTypes.string,
+  thumbnail: PropTypes.string
 };

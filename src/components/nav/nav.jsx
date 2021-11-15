@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom'
+import {NavLink, useHistory} from 'react-router-dom'
 import "./navStyles.css"
 
 import logo from "./assets/netflixLogo.png"
@@ -7,26 +7,28 @@ import {FaUserAlt} from "react-icons/fa"
 import {FaBell} from "react-icons/fa"
 
 export const NavBar = () =>{
+    const history = useHistory();
+    
     return(
         <nav className="nav-bar">
             <img id="logo" src={logo} alt="Netflix logo" />
             <ul className="nav-list">
                 <li className="nav-item">
-                    <NavLink exact={true} to="/">Home</NavLink>
+                    <NavLink exact={true} to="/home">Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink exact={true} to="/">TV Shows</NavLink>
+                    <NavLink exact={true} to="/home">TV Shows</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink exact={true} to="/">Movies</NavLink>
+                    <NavLink exact={true} to="/home">Movies</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink exact={true} to="/">New &amp; Popular</NavLink>
+                    <NavLink exact={true} to="/home">New &amp; Popular</NavLink>
                 </li>
             </ul>
                 
             <div id="right-nav">
-                <button className="right-nav-item">{<FaSearch className="nav-icon"/>}</button>
+                <button className="right-nav-item"onClick={history.push("/")}>{<FaSearch className="nav-icon"/>}</button>
                 <button className="right-nav-item">{<FaBell className="nav-icon"/>}</button>
                 <button className="right-nav-item">{<FaUserAlt className="nav-icon"/>}</button>
             </div>

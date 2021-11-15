@@ -1,11 +1,11 @@
 #footer-container {
   display: flex;
   flex-direction: column;
-  border-top: 0.5rem solid grey;
+  border-top: 0.5rem solid rgb(43, 43, 43);
 }
 
-#footer-content{
-    margin: 3rem auto 3rem auto;
+#footer-content {
+  margin: 3rem auto 3rem auto;
 }
 
 #footer-links {
@@ -15,7 +15,6 @@
 .columns {
   display: flex;
   flex-direction: column;
-
   margin: 1rem 3rem 1rem 0rem;
 }
 
@@ -32,7 +31,6 @@ a {
   margin-top: 0.6rem;
   font-size: 14px;
 }
-
 
 a:hover {
   text-decoration: underline;
