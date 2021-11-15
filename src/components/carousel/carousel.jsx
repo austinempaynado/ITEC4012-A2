@@ -20,8 +20,7 @@ export const MovieCarousel = (props) => {
           <MovieCard />
           <MovieCard />
           <MovieCard />
-          <MovieCard />
-          <div className="button-container" id ="right-chevron">
+          <div className="button-container" id="right-chevron">
             {<FaChevronRight className="chevron" />}
           </div>
         </div>

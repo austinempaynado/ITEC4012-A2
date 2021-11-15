@@ -7,9 +7,6 @@ export const CallToAction = (props) => {
 
   const [isIconic, setIsIcon] = useState(true);
 
-  
-
-  
   return (
     <div id="buttonContainer">
       {isIconic ? (

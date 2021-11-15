@@ -2,23 +2,45 @@ import "./login.css";
 
 import { CallToAction } from "../../callToAction/callToAction";
 import { Footer } from "../../footer/footer";
-import Logo from "../../nav/assets/netflixLogo.png";
 import { DropDown } from "../../language-drop-down/language";
+import { FaChevronRight } from "react-icons/fa";
+import Logo from "../../nav/assets/netflixLogo.png";
+import netflixBG from "./assets/netflixBG.jpeg";
 
 export const Login = () => {
   return (
     <div>
-      <div id="sign-in-container">
-        <img id="logo" src={Logo} alt="" />
-        <div  id="sign-in-button">
-          <CallToAction
-            name="Sign In"
-            type="Primary"
-            icon=" "
-          />
+      <div
+        id="sign-in-container"
+        style={{ backgroundImage: `url(${netflixBG})` }}
+      >
+        <div id="sign-in-bar">
+          <img id="logo" src={Logo} alt="" />
+          <div id="sign-in-buttons">
+            <DropDown text="English"></DropDown>
+            <CallToAction name="Sign In" type="SignIn" />
+          </div>
+        </div>
+
+        <div id="middle-captions">
+          <h1 id="login-heading">
+            Unlimited movies, TV <br />
+            shows, and more.
+          </h1>
+          <h2 id="login-subheading">Watch anywhere. Cancel anytime.</h2>
+          <p id="login-caption">
+            Ready to watch? Enter your email to create or restart your
+            membership
+          </p>
+          <div>
+            <div id = "input-container">
+              <input id="email-input" type="text" placeholder="Email address"></input>
+              <button id="get-started-button">Get Started {<FaChevronRight id="get-started-chevron"/>}</button>
+            </div>
+          </div>
         </div>
       </div>
-      <DropDown text="English"></DropDown>
+
       <Footer />
     </div>
   );

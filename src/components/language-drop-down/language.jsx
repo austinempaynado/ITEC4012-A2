@@ -1,4 +1,5 @@
 import {PropTypes} from "prop-types"
+import "./language.css"
 
 export const DropDown = (props) => {
     
@@ -6,7 +7,10 @@ export const DropDown = (props) => {
 
     return(
     <div>
-        <button>{icon}{text}</button>        
+        <select id = "drop-down">
+            <option value="English">English</option>
+            <option value="English">French</option>
+            </select>       
     </div>)
 };
 

@@ -55,7 +55,6 @@
   border-color: grey;
 }
 
-
 #play-button {
   color: #191919;
   background-color: #fafafa;
@@ -63,4 +62,8 @@
 
 #play-button:hover {
   background-color: grey;
+}
+
+#image-container{
+  width: 100%;
 }

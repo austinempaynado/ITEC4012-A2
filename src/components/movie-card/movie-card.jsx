@@ -14,7 +14,7 @@ import { IconButton } from "../iconButton/iconButton";
 export const MovieCard = (props) => {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
 
-  const { name, genre, image } = props;
+  const { name, type } = props;
 
   return (
     <div
@@ -28,8 +28,8 @@ export const MovieCard = (props) => {
       }}
     >
       {isPreviewMode ? (
-        <div >
-          <div>
+        <div>
+          <div id="image-container">
             <img className="movie-photo" src={Thumbnail} alt={name + "image"} />
           </div>
           <div id="button-container">
@@ -53,7 +53,6 @@ export const MovieCard = (props) => {
 };
 
 MovieCard.propTypes = {
-  image: PropTypes.string,
   name: PropTypes.string,
-  genre: PropTypes.string,
+  type: PropTypes.string,
 };

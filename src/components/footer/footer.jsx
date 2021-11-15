@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <div id="footer-container">
       <div id="footer-content">
-        <h1>Questions? Call 1-844-542-4813</h1>
+        <h1 id="heading">Questions? Call 1-844-542-4813</h1>
         <div id="footer-links">
           <div className="columns">
             <a>FAQ</a>
