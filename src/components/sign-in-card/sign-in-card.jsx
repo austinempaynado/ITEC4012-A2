@@ -19,7 +19,7 @@ export const SignInCard = () => {
         <img id="logo" src={Logo} alt="" />
         <div id="sign-in-buttons">
           <DropDown text="English"></DropDown>
-          <CallToAction onClick={()=>history.push("/home")} name="Sign In" type="SignIn" color="red"/>
+          <CallToAction path="/home" name="Sign In" type="SignIn" color="red"/>
         </div>
       </div>
 

@@ -17,5 +17,5 @@ Showcase.propTypes = {
   label: PropTypes.string,
   text: PropTypes.string,
   image: PropTypes.string,
-  flipped: PropTypes.string
+  flipped: PropTypes.bool
 };

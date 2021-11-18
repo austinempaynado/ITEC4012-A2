@@ -1,16 +1,20 @@
 import { PropTypes } from "prop-types";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./callToAction.css";
 
-export const CallToAction = (props) => {
-  const { name, icon, type, color, hasIcon } = props;
 
+
+export const CallToAction = (props) => {
+  const { name, icon, type, color, hasIcon, path} = props;
   const [isIconic, setIsIcon] = useState(true);
+
+  const history = useHistory();
 
   return (
     <div id="buttonContainer">
       {isIconic ? (
-        <button id="callToAction" className={`${type} ${color}`} onClick={props.onClick}>
+        <button onClick={()=>{history.push(`${path}`)}}id="callToAction" className={`${type} ${color}`}>
           {hasIcon && <div className="callToActionContent">{icon}</div>}
           <div className="callToActionContent">{name}</div>
         </button>
@@ -25,8 +29,9 @@ export const CallToAction = (props) => {
 
 CallToAction.propTypes = {
   name: PropTypes.string.isRequired,
-  icon: PropTypes.string,
+  icon: PropTypes.element,
   type: PropTypes.string.isRequired,
   color: PropTypes.string,
-  hasIcon: PropTypes.string
+  hasIcon: PropTypes.bool,
+  path: PropTypes.string
 };

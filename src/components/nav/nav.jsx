@@ -8,7 +8,9 @@ import {FaBell} from "react-icons/fa"
 
 export const NavBar = () =>{
     const history = useHistory();
+    const profileClick = () => history.push('/');
     
+
     return(
         <nav className="nav-bar">
             <img id="logo" src={logo} alt="Netflix logo" />
@@ -28,9 +30,9 @@ export const NavBar = () =>{
             </ul>
                 
             <div id="right-nav">
-                <button className="right-nav-item"onClick={history.push("/")}>{<FaSearch className="nav-icon"/>}</button>
+                <button className="right-nav-item">{<FaSearch className="nav-icon"/>}</button>
                 <button className="right-nav-item">{<FaBell className="nav-icon"/>}</button>
-                <button className="right-nav-item">{<FaUserAlt className="nav-icon"/>}</button>
+                <button className="right-nav-item" onClick={profileClick}>{<FaUserAlt className="nav-icon"/>}</button>
             </div>
         </nav>
 
