@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 //assets
-import Thumbnail from "./assets/communityThumbnail.jpg";
+import Thumbnail from "../../constants/images/communityThumbnail.jpg";
 import { FaPlay } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaThumbsDown } from "react-icons/fa";
@@ -13,24 +13,31 @@ import { IconButton } from "../iconButton/iconButton";
 
 export const MovieCard = (props) => {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
-
+  const [delayHandler, setDelayHandler] = useState(null);
   const { name, genre, thumbnail } = props;
+
+  const mouseEnterHandler = (event) => {
+    setDelayHandler(
+      setTimeout(() => {
+        setIsPreviewMode(true);
+      }, 500)
+    );
+  };
+
+  const mouseLeaveHandler = () => {
+    setIsPreviewMode(false);
+    clearTimeout(delayHandler);
+  };
 
   return (
     <div
       id="card"
-      onMouseEnter={() => {
-          setIsPreviewMode((prevPreview) => !prevPreview);
-      }}
-      onMouseLeave={() => {
-        setIsPreviewMode((prevPreview) => !prevPreview);
-      }}
+      onMouseEnter={mouseEnterHandler}
+      onMouseLeave={mouseLeaveHandler}
     >
       {isPreviewMode ? (
-        <div>
-          <div id="image-container">
-            <img className="movie-photo" src={Thumbnail} alt={name + "image"} />
-          </div>
+        <div id="movie-card-container">
+          <img className="movie-photo" src={thumbnail} alt={name + "image"} />
           <div id="button-container">
             <IconButton icon={<FaPlay />} type="Primary" />
             <IconButton icon={<FaPlus />} type="Secondary" />
@@ -40,11 +47,11 @@ export const MovieCard = (props) => {
               <IconButton icon={<FaAngleDown />} type="Secondary" />
             </div>
           </div>
-          <p className="details">Comedy</p>
+          <p className="details">{genre}</p>
         </div>
       ) : (
         <div>
-          <img className="movie-photo" src={Thumbnail} alt={name + "image"} />
+          <img className="movie-photo" src={thumbnail} alt={"movie-image"} />
         </div>
       )}
     </div>
@@ -54,5 +61,5 @@ export const MovieCard = (props) => {
 MovieCard.propTypes = {
   name: PropTypes.string,
   genre: PropTypes.string,
-  thumbnail: PropTypes.string
+  thumbnail: PropTypes.string,
 };

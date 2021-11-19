@@ -1,14 +1,12 @@
 import { CallToAction } from "../callToAction/callToAction";
 import { DropDown } from "../language-drop-down/language";
 import { FaChevronRight } from "react-icons/fa";
-import Logo from "../nav/assets/netflixLogo.png";
-import netflixBG from "./assets/netflixBG.jpeg";
+import Logo from "../../constants/images/netflixLogo.png"
+import netflixBG from "../../constants/images/netflixBG.jpeg";
 
 import "./sign-in-card.css"
-import { useHistory } from "react-router-dom";
 
 export const SignInCard = () => {
-  const history = useHistory();  
   
   return (
     <div

@@ -4,23 +4,32 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0rem 0rem 0rem 0.2rem;
+  margin: 0rem 0.2rem 0rem 0.2rem;
   box-shadow: 0 2px 7px black;
   background: #212121;
   border-radius: 0.2rem;
   overflow: hidden;
   cursor: pointer;
+
+  transform: scale(1);
+  transition-duration: 0.5s;
 }
 
 #card:hover{
+  z-index: 100000;
+  transition-delay: 500ms;
   transform: scale(1.4);
   transition-duration: 0.5s;
 }
 
+#movie-card-container{
+  width: 100%;
+}
+
 .movie-photo {
   width: 100%;
-  object-fit: contain;
 }
+
 
 .details {
   margin: 0 0 1rem 0;
@@ -64,9 +73,7 @@
   background-color: grey;
 }
 
-#image-container{
-  width: 100%;
-}
+
 
 .red{
   background: red;

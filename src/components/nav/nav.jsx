@@ -1,7 +1,7 @@
 import {NavLink, useHistory} from 'react-router-dom'
 import "./navStyles.css"
 
-import logo from "./assets/netflixLogo.png"
+import logo from "../../constants/images/netflixLogo.png"
 import {FaSearch} from "react-icons/fa"
 import {FaUserAlt} from "react-icons/fa"
 import {FaBell} from "react-icons/fa"

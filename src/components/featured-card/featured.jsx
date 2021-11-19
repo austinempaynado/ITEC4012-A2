@@ -1,15 +1,17 @@
 import "./featured.css";
-import featuredPhoto from "./assets/community.jpg";
+
+import PropTypes from "prop-types";
+ 
 import { FaPlay } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import { CallToAction } from "../callToAction/callToAction";
 
-export const FeaturedCard = () => {
+export const FeaturedCard = (props) => {
   return (
     <div id="featuredContainer">
       <img
         id="featuredShowPhoto"
-        src={featuredPhoto}
+        src={props.featuredImage}
         alt="featured show picture"
       />
       <div id="featuredDescriptionContainer">
@@ -19,15 +21,20 @@ export const FeaturedCard = () => {
           eccentric staff and student body.
         </p>
         <div id="CTAcontainer">
-          <CallToAction type="Primary" name="Play" icon={<FaPlay />} hasIcon />
+          <CallToAction type="Primary" name="Play" icon={<FaPlay />} hasIcon path="/home"/>
           <CallToAction
             type="Secondary"
             name="More Information"
             icon={<FaInfoCircle />}
             hasIcon
+            path="/home"
           />
         </div>
       </div>
     </div>
   );
 };
+
+FeaturedCard.propTypes = {
+  featuredImage: PropTypes.string.isRequired
+}
